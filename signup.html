@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+</head>
+<style>
+  body {
+  background-color: #0e0e0e;
+  color: #fff; 
+  font-family: Arial, sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #181818;
+    padding: 60px;
+    width: 400px;
+    border-radius: 5px;
+    text-align: center;
+}
+h1 {
+  color: #ffffff; 
+  text-align: center; 
+  margin-top: 50px; 
+  font-size: xx-large;
+}
+
+form {
+  display: flex; /* Arrange form elements horizontally */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  width: 300px; /* Set a fixed width for the form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px; /* Add padding for better spacing */
+ /* Light grey border */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+label {
+  margin-bottom: 5px; /* Add some space between label and input */
+  display: block; /* Make labels on separate lines */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%; /* Make input fields full width */
+  padding: 10px; /* Add some padding for better input */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 3px; /* Add slightly rounded corners */
+  margin-bottom: 15px; /* Add space between input fields */
+}
+
+button[type="submit"] {
+  background-color: #ff0000; /* YouTube red background */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Add padding for the button */
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Indicate clickable element */
+  transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+button[type="submit"]:hover {
+  background-color: #e00000; /* Slightly darker red on hover */
+}
+input[type="file"]::file-selector-button {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 40px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-right: 16px;
+  transition: background-color 200ms;
+}
+
+/* file upload button hover state */
+input[type="file"]::file-selector-button:hover {
+  background-color: #f3f4f6;
+}
+
+/* file upload button active state */
+input[type="file"]::file-selector-button:active {
+  background-color: #e5e7eb;
+}
+
+
+
+</style>
+<body>
+  <div class="container">
+  <h1>Sign In</h1>
+  <form action="uploaduser.php" method="post" enctype="multipart/form-data">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <label for="profilePicture">Profile Picture:</label><br>
+    <input type="file" class='inputfile' id="profilePicture" name="profilePicture"><br><br>
+    <button type="submit" name="upload">Sign In</button>
+  </form>
+</div>
+</body>
+</html>

@@ -47,17 +47,11 @@ body{
   padding-left: 10px;
 }
 .video-panel{
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   gap: 20px;
   width: 90vw;
   margin-left: 250px;
   margin-top: 130px;
   margin-right: 100px;
-  align-items: center;
-  justify-content: center;
 }
 .container{
   display: grid;
@@ -118,6 +112,7 @@ body{
 .channel-text{
   margin-left: -17px;
 }
+
 .side-bar:hover{
   background-color: var(--light-gray);
   border-radius: 5px;
@@ -125,6 +120,40 @@ body{
 .side-bar:hover .icons{
   background-color: var(--light-gray);
   border-radius: 5px;
+}
+
+.sub-menu-wrap{
+  position: absolute;
+  top: 40%;
+  right:1%;
+  width: 150px;
+  border-radius: 28%;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu{
+  max-height: 200px;
+}
+.sub-menu{
+  background-color: var(--light-gray);
+  padding: 20px;
+  margin: 10px;
+}
+.user-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.signin-text{
+  text-decoration: none;
+  padding: 5px;
+  transition: 0.3s;
+}
+.signin-text:hover{
+  background-color: rgb(56, 56, 56);
+  
 }
 .line{
     width: 190px;
